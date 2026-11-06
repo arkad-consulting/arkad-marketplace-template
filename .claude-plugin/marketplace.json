@@ -1,0 +1,32 @@
+{
+  "name": "arkad",
+  "owner": {
+    "name": "Arkad",
+    "url": "https://arkad-consulting.com"
+  },
+  "metadata": {
+    "description": "Arkad plugins for Claude Code and Cowork — internal tools, branded documents, content rules and project scaffolding."
+  },
+  "plugins": [
+    {
+      "name": "arkad-tools",
+      "source": "./plugins/arkad-tools",
+      "description": "Arkad internal tools through the OAuth-protected Arkad MCP Gateway: site checks, CRM lookups and a connection check. One connector, GitHub-org login, works in Claude Code, Cowork chat and scheduled tasks."
+    },
+    {
+      "name": "arkad-documents",
+      "source": "./plugins/arkad-documents",
+      "description": "Generate branded Arkad documents — starting with an internal memo — as print-ready A4 HTML from the templates shipped inside the plugin. No connector or secret."
+    },
+    {
+      "name": "arkad-content",
+      "source": "./plugins/arkad-content",
+      "description": "Write and check posts in the Arkad voice: a de-slop pass that removes AI phrasing and a pre-publish review with a small linter. The rules ship inside the plugin; no connector or secret."
+    },
+    {
+      "name": "arkad-dev",
+      "source": "./plugins/arkad-dev",
+      "description": "Scaffold a new Arkad code project with the same governance as this repo — AGENTS.md, specs, ADRs, changelog — and create the GitHub repository. Claude Code only: it needs a local shell and git."
+    }
+  ]
+}

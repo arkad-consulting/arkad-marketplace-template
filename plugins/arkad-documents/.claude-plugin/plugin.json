@@ -1,0 +1,15 @@
+{
+  "name": "arkad-documents",
+  "version": "0.1.1",
+  "description": "Generate branded Arkad documents — starting with an internal memo — as print-ready A4 HTML from the templates shipped inside the plugin. No connector or secret.",
+  "author": {
+    "name": "Arkad"
+  },
+  "keywords": [
+    "arkad",
+    "documents",
+    "memo",
+    "branding",
+    "print"
+  ]
+}

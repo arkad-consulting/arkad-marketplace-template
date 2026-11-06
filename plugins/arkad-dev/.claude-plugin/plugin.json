@@ -1,0 +1,14 @@
+{
+  "name": "arkad-dev",
+  "version": "0.1.1",
+  "description": "Scaffold a new Arkad code project with the same governance as this repo — AGENTS.md, specs, ADRs, changelog — and create the GitHub repository. Claude Code only: it needs a local shell and git.",
+  "author": {
+    "name": "Arkad"
+  },
+  "keywords": [
+    "arkad",
+    "scaffolding",
+    "spec-driven-development",
+    "project-setup"
+  ]
+}

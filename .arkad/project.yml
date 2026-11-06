@@ -1,0 +1,20 @@
+name: "arkad-marketplace-template"
+display_name: "Arkad Marketplace + MCP Gateway"
+description: "Monorepo: the Arkad plugin marketplace (skills for Claude Code / Cowork) plus the OAuth-protected MCP Gateway Cloudflare Worker (gateway/) exposing all Arkad tools to Claude on every surface."
+technologies:
+  - "vanilla-js"
+  - "cloudflare-workers"
+  - "mcp"
+  - "oauth"
+  - "claude-plugins"
+git:
+  provider: "github"
+  org: "arkad-consulting"
+  repo: "arkad-marketplace-template"
+deploy:
+  target: "Cloudflare Workers"
+  url: "https://arkad-mcp-gateway.YOUR-SUBDOMAIN.workers.dev"
+commands:
+  dev: "cd gateway && npx wrangler dev"
+  test: "./scripts/check-drift.sh && (cd gateway && npm test)"
+  deploy: "cd gateway && npx wrangler deploy"

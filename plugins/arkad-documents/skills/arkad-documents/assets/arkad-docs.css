@@ -1,0 +1,74 @@
+/* Arkad document design system — A4, print first. Replace the tokens with your brand. */
+:root {
+  --ink: #16191d;
+  --muted: #5d646d;
+  --rule: #d9dde2;
+  --accent: #1f6feb;
+  --paper: #ffffff;
+  --font-body: Georgia, "Times New Roman", serif;
+  --font-head: "Helvetica Neue", Arial, sans-serif;
+}
+
+@page { size: A4; margin: 22mm 20mm 24mm; }
+
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body {
+  margin: 0 auto;
+  max-width: 170mm;
+  color: var(--ink);
+  font: 10.5pt/1.55 var(--font-body);
+}
+
+header.doc-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 6mm;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 8mm;
+}
+header.doc-head svg { height: 11mm; width: auto; }
+.doc-type {
+  font: 600 8pt/1 var(--font-head);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.2; }
+h1 { font-size: 20pt; margin: 0 0 4mm; }
+h2 { font-size: 12.5pt; margin: 8mm 0 2mm; }
+h3 { font-size: 10.5pt; margin: 5mm 0 1mm; }
+
+dl.meta {
+  display: grid;
+  grid-template-columns: 28mm 1fr;
+  gap: 1mm 4mm;
+  margin: 0 0 8mm;
+  font: 9pt/1.4 var(--font-head);
+}
+dl.meta dt { color: var(--muted); }
+dl.meta dd { margin: 0; }
+
+table { width: 100%; border-collapse: collapse; margin: 3mm 0; font-size: 9.5pt; }
+th, td { text-align: left; padding: 1.8mm 2mm; border-bottom: 1px solid var(--rule); }
+th { font: 600 8.5pt/1.2 var(--font-head); color: var(--muted); }
+
+.callout {
+  border-left: 3px solid var(--accent);
+  padding: 2mm 4mm;
+  margin: 4mm 0;
+  background: #f3f7fe;
+}
+
+footer.doc-foot {
+  margin-top: 12mm;
+  padding-top: 3mm;
+  border-top: 1px solid var(--rule);
+  font: 8pt/1.4 var(--font-head);
+  color: var(--muted);
+}
+
+section { break-inside: avoid-page; }
+.page-break { break-before: page; }

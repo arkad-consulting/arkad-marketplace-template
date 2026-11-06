@@ -1,0 +1,1 @@
+Claude Code only: needs a local shell, git and gh auth, which Cowork chat and scheduled tasks do not have (ADR 0004).

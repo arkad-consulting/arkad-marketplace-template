@@ -1,0 +1,16 @@
+{
+  "name": "arkad-tools",
+  "version": "0.1.1",
+  "description": "Arkad internal tools through the OAuth-protected Arkad MCP Gateway: site checks, CRM lookups and a connection check. One connector, GitHub-org login, works in Claude Code, Cowork chat and scheduled tasks.",
+  "author": {
+    "name": "Arkad"
+  },
+  "keywords": [
+    "arkad",
+    "mcp",
+    "gateway",
+    "tools",
+    "crm",
+    "sitecheck"
+  ]
+}

@@ -1,0 +1,25 @@
+name = "arkad-mcp-gateway"
+main = "src/index.js"
+compatibility_date = "2025-04-01"
+# Pin the account when your Cloudflare login has several: a non-interactive
+# `wrangler deploy` (CI, a scripted run) cannot pick one and fails listing them.
+# account_id = "<your Cloudflare account id>"
+
+# Workers KV — required by @cloudflare/workers-oauth-provider for token/grant storage.
+# Create it with `npx wrangler kv namespace create OAUTH_KV` and paste the id.
+kv_namespaces = [
+  { binding = "OAUTH_KV", id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID" }
+]
+
+# ── Secrets (set via `wrangler secret put <NAME>`, never committed) ───────
+# OAuth (a GitHub OAuth App owned by your org):
+#   GITHUB_CLIENT_ID       - OAuth App client id
+#   GITHUB_CLIENT_SECRET   - OAuth App client secret
+# Downstream API keys (held server-side, never exposed to clients):
+#   CRM_API_URL            - base URL of your CRM API (crm_* tools)
+#   CRM_API_KEY            - bearer token for that API
+# Who each team member is (GitHub → name, work e-mail) is src/people.js, not a secret.
+
+[vars]
+# Only active members of this GitHub org can authorize the connector.
+ALLOWED_ORG = "arkad-consulting"

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<title>{{title}} — Arkad memo</title>
+<style>
+/* paste assets/arkad-docs.css here */
+</style>
+</head>
+<body>
+
+<header class="doc-head">
+  {{logo}}
+  <span class="doc-type">Internal memo</span>
+</header>
+
+<h1>{{title}}</h1>
+
+<dl class="meta">
+  <dt>To</dt><dd>{{recipients}}</dd>
+  <dt>From</dt><dd>{{author}}</dd>
+  <dt>Date</dt><dd>{{date}}</dd>
+  <dt>Decision by</dt><dd>{{decision_date}}</dd>
+</dl>
+
+<section>
+  <h2>In one paragraph</h2>
+  <p>{{summary}}</p>
+</section>
+
+<section>
+  <h2>Context</h2>
+  <p>{{context}}</p>
+</section>
+
+<section>
+  <h2>Options</h2>
+  <!-- One row per option considered. Remove the table if there is only one way forward. -->
+  <table>
+    <thead><tr><th>Option</th><th>For</th><th>Against</th></tr></thead>
+    <tbody>
+      <tr><td>{{option_a}}</td><td>{{option_a_for}}</td><td>{{option_a_against}}</td></tr>
+      <tr><td>{{option_b}}</td><td>{{option_b_for}}</td><td>{{option_b_against}}</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Recommendation</h2>
+  <div class="callout"><p>{{recommendation}}</p></div>
+</section>
+
+<!-- Optional section: keep only if there are agreed next steps. -->
+<section>
+  <h2>Next steps</h2>
+  <ul>
+    <li>{{next_step}}</li>
+  </ul>
+</section>
+
+<footer class="doc-foot">Arkad · internal · {{date}}</footer>
+
+</body>
+</html>

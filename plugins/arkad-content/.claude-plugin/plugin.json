@@ -1,0 +1,16 @@
+{
+  "name": "arkad-content",
+  "version": "0.1.1",
+  "description": "Write and check posts in the Arkad voice: a de-slop pass that removes AI phrasing and a pre-publish review with a small linter. The rules ship inside the plugin; no connector or secret.",
+  "author": {
+    "name": "Arkad"
+  },
+  "keywords": [
+    "arkad",
+    "content",
+    "copywriting",
+    "deslop",
+    "review",
+    "brand-voice"
+  ]
+}
